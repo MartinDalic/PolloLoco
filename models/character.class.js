@@ -10,7 +10,7 @@ class Character extends MovableObject {
         'img/2_character_pepe/2_walk/W-26.png'
     ]
     currentImage = 0;
-
+    chrWorld;
 
     constructor() {
         super().loadImage('img/2_character_pepe/2_walk/W-21.png');
@@ -21,11 +21,16 @@ class Character extends MovableObject {
 
     animate() {
         setInterval(() => {
-            let i = this.currentImage % this.IMAGES_WALKING.length; // remainder (%) operator
-            let path = this.IMAGES_WALKING[i]
-            this.img = this.imageCache[path];
-            this.currentImage++;
-        }, 200);
+
+            if(this.chrWorld.keyboard.RIGHT) {
+                let i = this.currentImage % this.IMAGES_WALKING.length; // remainder (%) operator
+                let path = this.IMAGES_WALKING[i]
+                this.img = this.imageCache[path];
+                this.currentImage++;
+
+            }
+
+        }, 100);
     }
 
 

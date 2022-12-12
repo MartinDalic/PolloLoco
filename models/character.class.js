@@ -35,7 +35,7 @@ class Character extends MovableObject {
 
         setInterval(() => {
 
-            if(this.chrWorld.keyboard.RIGHT) {
+            if(this.chrWorld.keyboard.RIGHT || this.chrWorld.keyboard.LEFT) {
 
                 // Walk Animation
                 let i = this.currentImage % this.IMAGES_WALKING.length; // remainder (%) operator

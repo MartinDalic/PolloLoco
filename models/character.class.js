@@ -31,8 +31,8 @@ class Character extends MovableObject {
             if(this.chrWorld.keyboard.LEFT) {
                 this.x -= this.speed;
                 this.otherDirection = true;
-            }
-
+            }         
+            this.chrWorld.camera_x = -this.x;
         }, 1000 / 60);
 
         setInterval(() => {

@@ -28,7 +28,7 @@ class Character extends MovableObject {
                 this.x += this.speed;
                 this.otherDirection = false;
             }
-            if(this.chrWorld.keyboard.LEFT && this.x > 0) {
+            if(this.chrWorld.keyboard.LEFT && this.x > this.chrWorld.level.level_start_x) {
                 this.x -= this.speed;
                 this.otherDirection = true;
             }         

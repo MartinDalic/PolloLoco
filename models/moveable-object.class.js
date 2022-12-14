@@ -14,7 +14,7 @@ class MovableObject {
   }
 
   /**
-   *
+   * load images
    * @param {Array} arr
    */
   loadImages(arr) {
